@@ -43,7 +43,8 @@ umount /mnt
 
 # Install mysql
 
-bash -x ./install_mysql.sh
+export DEBIAN_FRONTEND=noninteractive
+apt-get install -y mysql-server > /dev/null 2>&1
 
 #Cleanup VirtualBox
 rm $VBOX_ISO
