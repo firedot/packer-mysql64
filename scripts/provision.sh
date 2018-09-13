@@ -41,9 +41,9 @@ mount -o loop $VBOX_ISO /mnt
 yes|sh /mnt/VBoxLinuxAdditions.run
 umount /mnt
 
-# Install redis
+# Install mysql
 
-apt-get install -y redis-server
+bash -x ./install_mysql.sh
 
 #Cleanup VirtualBox
 rm $VBOX_ISO
